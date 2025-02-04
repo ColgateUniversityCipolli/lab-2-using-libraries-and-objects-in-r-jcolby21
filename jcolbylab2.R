@@ -67,8 +67,7 @@ for (i in 1:length(code.to.process)) {
 
 
 library(jsonlite)
-
-json_data <- fromJSON("The Front Bottoms - Talon Of The Hawk - Au Revoir (Adios).json")
+json_data <- fromJSON("The Front Bottoms-Talon Of The Hawk-Au Revoir (Adios).json")
 #could not figure out what to input here so I just continued
 str(json_data)
 
