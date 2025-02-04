@@ -89,19 +89,33 @@
 \maketitle
 
 \begin{multicols}{2}
-\begin{abstract}
-This document provides a basic template for the 2-page labs we will complete each week. Here, briefly summarize what you did and why it might be helpful. Provide all the top-line conclusions, but avoid providing \emph{all} the details. Results should be limited to ``we show X, Y, and Z."
-\end{abstract}
+
 
 \section{Introduction}
-Provide an overarching summary of what you're talking about. In this section, you introduce the idea to the reader, and your goal is to pull them in. What's the mystery you aim to solve?
+This lab introduced us to new places to explore in R including different types of files and functions. We are introduced to two new packages, stringr and jsonlite. Additionally this lab focuses on working directories and importing files and extracting data.
 
 \section{Methods}
-Describe the data you are working with, if applicable. Describe the specific process you will follow to answer the question at hand. This does not mean you should write something like this.
+For this lab we were given a folder to download, called MUSIC containing sub folders and .wav audio files. This part of the Lab consisted of two parts, Task 1 and Task 2.
 
 \subsection{Methods for Task 1}
+The overall goal for this task was to work on directory skills, building a batch file for data processing. Through accessing a downloaded folder called MUSIC you could work with the .wav files inside.
+\begin{itemize}\itemsep0em
+\item After downloading the music files and installing the stringr package, I used some of the functions to help work through the data and sort what we were looking for.
+\item After completing a sample for one song getting the album, artist, and track name in a desired format, a for loop was implemented with some tweaks to get a desired vector of all the files in MUSIC.
+\item After the vector was made for all the files, we converted it into a txt file called batfile.txt
+\end{itemize}
 
 \subsection{Methods for Task 2}
+The overall goal for Task 2 was to Process JSON Output and extract some information from the JSON file.
+\begin{itemize}\itemsep0em
+\item After installing the jsonlite package, I used the strsplit$()$ to extract the artist, album, and tracks from the code.to.process found in Task 1.
+\item After loading in the file given using the fromJSON$()$ a large list of a variety of data was returned.
+\item Using the data we found some categories such as average loudness, using the dollar sign to help find column names
+\end{itemize}
+
+\begin{tiny}
+\bibliography{bib}
+\end{tiny}
 
 \end{multicols}
 

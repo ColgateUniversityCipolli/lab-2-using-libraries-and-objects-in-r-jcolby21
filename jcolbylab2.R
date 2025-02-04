@@ -68,8 +68,10 @@ for (i in 1:length(code.to.process)) {
 
 library(jsonlite)
 
-json_data <- fromJSON(file.name) #could not figure out what to input here so I just continued
+json_data <- fromJSON("The Front Bottoms - Talon Of The Hawk - Au Revoir (Adios).json")
+#could not figure out what to input here so I just continued
 str(json_data)
+
 
 #all the things we wanted to extract
 avg_loudness <- json_data$audio_features$loudness
