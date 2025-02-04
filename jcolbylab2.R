@@ -68,7 +68,15 @@ for (i in 1:length(code.to.process)) {
 
 library(jsonlite)
 
-
-json_data <- fromJSON(desired.output)
+json_data <- fromJSON(file.name) #could not figure out what to input here so I just continued
 str(json_data)
+
+#all the things we wanted to extract
+avg_loudness <- json_data$audio_features$loudness
+key <- json_data$audio_features$key
+energy <- json_data$audio_features$energy
+danceability <- json_data$audio_features$danceability
+bpm <- json_data$audio_features$tempo
+mode <- json_data$audio_features$mode
+length_seconds <- json_data$audio_features$duration_ms / 1000
 
