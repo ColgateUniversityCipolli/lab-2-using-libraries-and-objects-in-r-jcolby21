@@ -58,3 +58,17 @@ print(code.to.process)
 writeLines(code.to.process, "batfile.txt")
 ##############################################################################
 #Task 2
+for (i in 1:length(code.to.process)) {
+  split_name <- strsplit(code.to.process[i], "-")[[1]] # Get the first element of the list
+  artist = c(artist, split_name[2])  # Access the 2nd element
+  album = c(album, split_name[4])    # Access the 4th element
+  track = c(track, split_name[5])    # Access the 5th element
+}
+
+
+library(jsonlite)
+
+
+json_data <- fromJSON(desired.output)
+str(json_data)
+
